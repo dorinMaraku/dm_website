@@ -1,0 +1,197 @@
+* {
+    outline: 1px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}  
+
+body {
+background-color: whitesmoke;
+color: rgba(0, 0, 0, 0.8);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo-header {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-flow: wrap;
+}
+
+.nav-item {
+    list-style: none;
+    cursor: pointer;
+    transition: 0.7s ease-in-out;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media(max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    } 
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    } 
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    } 
+    .nav-menu {
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        background-color: whitesmoke;
+        padding: 5px 30px;
+    }
+
+    .nav-menu.active{
+        left:0;
+    } 
+}
+
+.main-bg {
+    background-image: url('./images/main-background\ img.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flexbox;
+    min-height: 600px;
+    width: 100%;
+    z-index: -1;
+    margin: 0 auto;
+}
+
+.layer-bg {
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: inherit;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: antiquewhite;
+}
+
+.main-icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 36px;
+}
+
+.main-icons li {
+    list-style: none;
+    margin: 10px auto;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.main-icons li :hover {
+    font-size: 42px;
+}
+
+.layer-bg h1 {
+    font-size: 84px;
+    font-weight: 300;
+    max-width: 80%;
+    margin-top: 20px;
+    line-height: 0.9;
+}
+
+.layer-bg h3 {
+    font-size: 42px;
+    font-weight: 300;
+    max-width: 80%;
+    margin-top: 20px;
+}
+
+#about-btn {
+    border: 2px solid antiquewhite;
+    border-radius: 5%;
+    background-color: transparent;
+    color: antiquewhite;
+    font-size: 24px;
+    padding: 10px 16px;
+    margin-top: 20px;
+}
+
+#about-btn:hover {
+    background-color: antiquewhite;
+    color: black;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    align-items: center;
+    padding: 20px 20px;
+    margin: 10px 10px;
+
+}
+
+.logo-footer {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+footer .icons li {
+    list-style: none;
+    font-size: 2rem;
+}
+
+footer .icons li :hover {
+    color: #6D6875;
+}
+
+section h4 {
+    font-weight: 500;
+
+}
+
+#email:hover {
+    text-decoration: underline;
+    color: #6D6875;
+}
+
