@@ -1,9 +1,3 @@
-:root {
-    --main-bg-color: rgb(245, 245, 245);
-    --main-font-color: rgba(0, 0, 0, 0.8);
-    --layer-bg-color: rgba(0, 0, 0, 0.6);
-    --layer-bg-font-color: #fff;
-}
 
 * {
     box-sizing: border-box;
@@ -12,9 +6,21 @@
     font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }  
 
+.light {
+    /*color variables*/
+    --main-bg-color: rgb(245, 245, 245);
+    --main-font-color: rgba(0, 0, 0, 0.8);
+    --layer-bg-color: rgba(0, 0, 0, 0.6);
+    --layer-bg-font-color: #fff;
+}
+
+.dark {
+    background-color: aquamarine;
+}
+
 body {
-background-color: var(--main-bg-color);
-color: var(--main-font-color);
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
 }
 
 header {
@@ -116,12 +122,6 @@ a {
     font-size: 1.4rem;
     margin-left: 30px;
     cursor: pointer;
-}
-
-.toggle-icon:active {
-    transform: rotate(180deg);
-    color: var(--main-font-color);
-    background-color: transparent;
 }
 
 .main-bg {

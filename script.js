@@ -1,20 +1,14 @@
-// const navItem = document.querySelectorAll('.nav-item')
-
-// for (i of navItem) {
-//     i.onmouseover = function addUnderline () {
-//     this.style.textDecoration = "underline"
-//     this.style.color = "#6D6875"
-//     this.style.transition = "0.5s ease-in-out"
-// }
-
-//     i.onmouseout = function removeUnderline () {
-//     this.style.textDecoration = ""
-//     this.style.color = ""
-// }
-// }
-
-const aboutBtn = document.querySelector('#about-btn')
-console.log(aboutBtn)
+const toggleIcon = document.querySelector(".toggle-icon i")
+toggleIcon.addEventListener("click", function () {
+    const lightTheme = document.querySelector(".light")
+    lightTheme.classList.toggle("dark");
+    if (lightTheme.classList.contains("dark")) {
+        this.style.transform = "rotate(180deg)"
+    }
+    else {
+        this.style.transform = "rotate(0deg)"
+    }
+})
 
 const hamburger = document.querySelector(".hamburger")
 const navMenu = document.querySelector(".nav-menu")
