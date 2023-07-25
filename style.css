@@ -8,19 +8,20 @@
 
 .light {
     /*color variables*/
-
     --main-bg-color: rgba(219, 214, 209);
     --main-font-color: rgba(0, 0, 0, 0.8);
     --layer-bg-color: rgba(0, 0, 0, 0.6);
     --layer-bg-font-color: #fff;
+    --about-bg-color: rgba(180, 189, 208)
 }
 
 .dark {
     /*color variables*/
     --main-bg-color: rgba(31, 37, 50);
-    --main-font-color: rgba(256, 256, 256, 0.8);
-    --layer-bg-color: rgba(0, 0, 0, 0.6);
-    --layer-bg-font-color: rgba(256, 256, 256, 0.8);
+    --main-font-color: rgba(256, 256, 256, 0.7);
+    --layer-bg-color: rgba(0, 0, 0, 0.8);
+    --layer-bg-font-color: rgba(256, 256, 256, 0.7);
+    --about-bg-color: none
 }
 
 body {
@@ -61,6 +62,11 @@ header {
 
 .nav-item{
     list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover{
+    scale: 1.2;
 }
 
 .nav-item a{
@@ -72,7 +78,6 @@ header {
 .nav-item a:hover {
     opacity: 1;
     text-decoration: underline;
-    scale: 1.2;
 }
 
 a { 
@@ -122,7 +127,6 @@ a {
         padding: 5px 30px;
         z-index: 10;
     }
-
     .nav-menu.active{
         left:0;
     } 
@@ -142,7 +146,6 @@ a {
     display: flex;
     height: max(100vh, 100%);
     width: max(100vw, 100%);
-    z-index: -1;
     margin: 0 auto;
 }
 
@@ -150,7 +153,6 @@ a {
     background-color: var(--layer-bg-color);
     max-height: 100%;
     max-width: 100%;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,10 +171,10 @@ a {
 .main-icons li {
     list-style: none;
     margin: 10px 20px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.main-icons li :hover {
+.main-icons li:hover {
     cursor: pointer;
     scale: 1.5;
 }
@@ -194,10 +196,10 @@ a {
 
 #about-btn {
     border: 2px solid var(--layer-bg-font-color);
-    border-radius: 5%;
-    background-color: transparent;
     color: var(--layer-bg-font-color);
+    border-radius: 5px;
     font-size: 1.5rem;
+    background-color: transparent;
     padding: 8px 16px;
     margin: 20px auto;
     transition: all 0.3s ease-in-out;
@@ -206,18 +208,24 @@ a {
 #about-btn:hover {
     background-color: var(--layer-bg-font-color);
     color: var(--layer-bg-color);
-    font-weight: 500;
     scale: 1.2;
     cursor: pointer;
 }
 
+
 footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: max(30vh, 100%);    
+}
+
+.footer {
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
     align-items: center;
     padding: 20px 20px;
-    margin: 10px 10px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -227,32 +235,81 @@ footer {
     font-weight: 300;
 }
 
-footer .icons li {
+.footer .icons li {
     list-style: none;
     font-size: 2rem;
     transition: all 0.3s ease-in-out;
 }
 
-li i:hover {
+.footer .icons li i:hover {
     scale: 1.2;
     opacity: 1;
     cursor: pointer;
 }
 
+.address, .contacts {
+    margin: 10px 5px;
+
+}
 section h4 {
     font-weight: 500;
-
 }
 
 #email:hover {
     text-decoration: underline;
-    color: #340088;
+    color: #5300da;
 }
 
 .copyright {
     margin: 5px;
     font-size: 0.6rem;
     text-align: center;
-    align-items: center;
+    align-self: center;
+}
+
+/* styles about page */
+*{
+    outline: 1px
+}
+.about {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: max(100vh, 100%);
+    max-width: max(100vw, 100%);
+    padding: 30px;
+    background: var(--about-bg-color);
+}
+
+.about-me {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    margin: 30px;
+}
+
+.text-header h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.about-me p{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-indent: 1.2;
+    text-align: justify;
+}
+
+.about-me img {
+    float:left;
+    max-height: 40%;
+    width: 30%;
+    padding-right: 10px;
 }
