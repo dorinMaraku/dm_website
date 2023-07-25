@@ -8,20 +8,26 @@
 
 .light {
     /*color variables*/
-    --main-bg-color: rgb(245, 245, 245);
+
+    --main-bg-color: rgba(219, 214, 209);
     --main-font-color: rgba(0, 0, 0, 0.8);
     --layer-bg-color: rgba(0, 0, 0, 0.6);
     --layer-bg-font-color: #fff;
 }
 
 .dark {
-    background-color: aquamarine;
+    /*color variables*/
+    --main-bg-color: rgba(31, 37, 50);
+    --main-font-color: rgba(256, 256, 256, 0.8);
+    --layer-bg-color: rgba(0, 0, 0, 0.6);
+    --layer-bg-font-color: rgba(256, 256, 256, 0.8);
 }
 
 body {
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
-}
+    transition: all 0.3s ease-in-out;
+}   
 
 header {
     display: flex;
@@ -53,13 +59,17 @@ header {
     flex-flow: wrap;
 }
 
-.nav-item {
+.nav-item{
     list-style: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
 }
 
-.nav-item:hover {
+.nav-item a{
+    cursor: pointer;
+    transform: translateX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
     opacity: 1;
     text-decoration: underline;
     scale: 1.2;
@@ -83,7 +93,7 @@ a {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--main-font-color);
 }
 
 @media(max-width:800px) {
@@ -119,7 +129,7 @@ a {
 }
 
 .toggle-icon {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-left: 30px;
     cursor: pointer;
 }
@@ -187,15 +197,17 @@ a {
     border-radius: 5%;
     background-color: transparent;
     color: var(--layer-bg-font-color);
-    font-size: 24px;
-    padding: 10px 16px;
-    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 8px 16px;
+    margin: 20px auto;
     transition: all 0.3s ease-in-out;
 }
 
 #about-btn:hover {
     background-color: var(--layer-bg-font-color);
-    color: var(--main-font-color);
+    color: var(--layer-bg-color);
+    font-weight: 500;
+    scale: 1.2;
     cursor: pointer;
 }
 
